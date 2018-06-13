@@ -20,8 +20,6 @@ window.setInterval(function() {
     
     setTimeInputs(totalSec);
   }
-  
-  document.title = `${section} - ${zeroPad(newMin)}:${zeroPad(newSec)}` + paused ? ' (paused)' : '';
 }, 1000);
 
 function setTimeInputs(totalSec) {
@@ -30,6 +28,8 @@ function setTimeInputs(totalSec) {
 
   minInput.value = zeroPad(newMin);
   secInput.value = zeroPad(newSec);
+
+  document.title = `${section} - ${zeroPad(newMin)}:${zeroPad(newSec)}` + paused ? ' (paused)' : '';
 }
 
 var toggleButton = document.querySelector('.pomodoro__toggle');
