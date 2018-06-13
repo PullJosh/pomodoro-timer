@@ -29,7 +29,7 @@ function setTimeInputs(totalSec) {
   minInput.value = zeroPad(newMin);
   secInput.value = zeroPad(newSec);
 
-  document.title = `${section} - ${zeroPad(newMin)}:${zeroPad(newSec)}` + paused ? ' (paused)' : '';
+  document.title = `${section} - ${zeroPad(newMin)}:${zeroPad(newSec)}` + (paused ? ' (paused)' : '');
 }
 
 var toggleButton = document.querySelector('.pomodoro__toggle');
